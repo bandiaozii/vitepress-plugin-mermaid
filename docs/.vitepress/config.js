@@ -1,55 +1,119 @@
 import { defineConfig } from "vitepress";
-import { withMermaid } from "../../src";
+import { withMermaid } from 'vitepress-plugin-mermaid';
+// import { version } from "../../package.json";
+import { head } from './theme/config/head';
+import { markdown } from './theme/config/markdown';
+import { themeConfig } from './theme/config/theme';
 
-import { version } from "../../package.json";
+const customElements = [
+  'math',
+  'maction',
+  'maligngroup',
+  'malignmark',
+  'menclose',
+  'merror',
+  'mfenced',
+  'mfrac',
+  'mi',
+  'mlongdiv',
+  'mmultiscripts',
+  'mn',
+  'mo',
+  'mover',
+  'mpadded',
+  'mphantom',
+  'mroot',
+  'mrow',
+  'ms',
+  'mscarries',
+  'mscarry',
+  'mscarries',
+  'msgroup',
+  'mstack',
+  'mlongdiv',
+  'msline',
+  'mstack',
+  'mspace',
+  'msqrt',
+  'msrow',
+  'mstack',
+  'mstack',
+  'mstyle',
+  'msub',
+  'msup',
+  'msubsup',
+  'mtable',
+  'mtd',
+  'mtext',
+  'mtr',
+  'munder',
+  'munderover',
+  'semantics',
+  'math',
+  'mi',
+  'mn',
+  'mo',
+  'ms',
+  'mspace',
+  'mtext',
+  'menclose',
+  'merror',
+  'mfenced',
+  'mfrac',
+  'mpadded',
+  'mphantom',
+  'mroot',
+  'mrow',
+  'msqrt',
+  'mstyle',
+  'mmultiscripts',
+  'mover',
+  'mprescripts',
+  'msub',
+  'msubsup',
+  'msup',
+  'munder',
+  'munderover',
+  'none',
+  'maligngroup',
+  'malignmark',
+  'mtable',
+  'mtd',
+  'mtr',
+  'mlongdiv',
+  'mscarries',
+  'mscarry',
+  'msgroup',
+  'msline',
+  'msrow',
+  'mstack',
+  'maction',
+  'semantics',
+  'annotation',
+  'annotation-xml',
+  'mjx-container',
+  'mjx-assistive-mml',
+];
 
 export default withMermaid(
   defineConfig({
-    lang: "en-US",
-    title: "VitePress Plugin Mermaid",
-    description: "Mermaid support for vitepress",
-    base: "/vitepress-plugin-mermaid/",
+    title: '医检记忆卡',
+    // titleTemplate:
     lastUpdated: true,
+    description: '分享医学检验考试笔记',
+    lang: 'zh-CN',
+    base: '/jianyan/',
+    head,
+    markdown: markdown,
 
-    themeConfig: {
-      nav: nav(),
-
-      sidebar: {
-        "/guide/": sidebarGuide(),
-      },
-
-      socialLinks: [
-        {
-          icon: "github",
-          link: "https://github.com/emersonbottero/vitepress-plugin-mermaid",
+    themeConfig, // 主题配置
+    vue: {
+      reactivityTransform: false,
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => customElements.includes(tag),
         },
-      ],
-
-      footer: {
-        message: "Released under the MIT License.",
-        copyright: "Copyright © 2021-present Emerson Bottero",
-      },
-    },
+      }
+    }
   })
 );
-
-function nav() {
-  return [
-    { text: "Guide", link: "/guide/getting-started", activeMatch: "/guide/" },
-    { text: version, link: "" },
-  ];
-}
-
-function sidebarGuide() {
-  return [
-    {
-      text: "Introduction",
-      collapsible: true,
-      items: [
-        { text: "Getting Started", link: "/guide/getting-started" },
-        { text: "More Examples", link: "/guide/more-examples" },
-        { text: "Styled Examples", link: "/guide/styles" },
-      ],
-    },
-  ];
-}

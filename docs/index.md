@@ -1,24 +1,21 @@
 ---
 layout: home
 
-title: VitePress Plugin Mermaid
-titleTemplate: Mermaid support for vitepress
+title: 医检记忆卡
+titleTemplate: 分享考试技巧
 
 hero:
-  name: VitePress Plugin Mermaid
-  text: Mermaid support for vitepress
+  name: 医检记忆卡
+  text: 分享医检考试方法
+  tagline: 一起考上职称和上岸
+  image:
+    src: /logo.svg
+    alt: Vite
   actions:
-    - theme: brand
-      text: Get Started
-      link: /guide/getting-started
-
-features:
-  - title: 🧜‍♀️ Mermaid, Diagram and charting tools
-    details: Mermaid lets you create diagrams and visualizations using text and code..
-  - title: 🌚 Dark theme support build-in
-    details: It detect theme changes and switch to dark/light.
-  - title: 📸 Images are supported
-    details: Since it uses the mermaid api you can use images.
-  - title: 🧩 Set theme per page
-    details: Frontmatter options available.
+    # - theme: brand
+    #   text: 选择科目
+    #   link: /examination/Shi/index
+    - theme: alt
+      text: 开始记忆
+      link: /guide/
 ---

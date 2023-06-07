@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["vitepress"]
+  "cSpell.words": [
+    "vitepress"
+  ],
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "aiXcoder.showTrayIcon": true
 }
