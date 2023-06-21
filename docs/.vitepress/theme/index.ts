@@ -7,6 +7,7 @@ import '../../public/fontawesome/css/all.css';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import './styles/vars.css';
 import './custom.css';
+
 import AsideSponsors from './components/AsideSponsors.vue';
 import beitiL from './components/beitiL.vue';
 import beitiX from './components/beitiX.vue';
@@ -16,6 +17,7 @@ import beitiW from './components/beitiW.vue';
 import TreeChart from './components/TreeChart.vue';
 import kaodian from './components/kaodian.vue';
 import Tenant from './components/Tenant.vue';
+import NewLayout from '../theme/NewLayout.vue';
 import son from './components/son.vue';
 import father from './components/father.vue';
 import Option from './components/Option.vue';
@@ -38,7 +40,7 @@ import VueCookies from 'vue-cookies';
 
 export default {
   ...DefaultTheme,
-  // Layout: NewLayout,
+  Layout: NewLayout,
   NotFound: () => 'custom 404', // <- this is a Vue 3 functional component
   enhanceApp({ app, router, siteData }) {
     app.config.globalProperties.$cookies = VueCookies

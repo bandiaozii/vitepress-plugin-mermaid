@@ -106,6 +106,7 @@ export default withMermaid(
     head,
     markdown: markdown,
 
+
     themeConfig, // 主题配置
     vue: {
       reactivityTransform: false,

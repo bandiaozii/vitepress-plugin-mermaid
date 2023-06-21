@@ -1,12 +1,12 @@
-<!-- <template>
+<template>
   <VPLink @click="pageSkip" class="sp-link">
     <read class="sp-icon" style="width: 16px; height: 16px; margin: 5px" />开始记忆
   </VPLink>
 </template>
 <script>
 import { withBase } from "vitepress";
-import axios from "axios";
-import { setKey } from "../utils/auth";
+// import axios from "axios";
+// import { setKey } from "../utils/auth";
 import { defineComponent } from "vue";
 export default defineComponent({
   props: ["list"],
@@ -20,12 +20,12 @@ export default defineComponent({
     }
   },
 });
-</script>  -->
+</script> 
 
 
 
 <!-- 链接题库 (弃用)-->
-<template>
+<!-- <template>
   <VPLink @click="pageSkip" class="sp-link">
     <read class="sp-icon" style="width: 16px; height: 16px; margin: 5px" />开始记忆
   </VPLink>
@@ -69,7 +69,7 @@ export default defineComponent({
     },
   },
 });
-</script> 
+</script>  -->
 
 <!-- 绑定口令 -->
 <!-- <template>

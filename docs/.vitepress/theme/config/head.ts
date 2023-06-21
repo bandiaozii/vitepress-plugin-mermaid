@@ -16,7 +16,7 @@ export const head: HeadConfig[] = [
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: '@vite_js' }],
   ['meta', { name: 'theme-color', content: '#646cff' }],
-  // ['meta', { name: 'theme-color', src: '/web/fontawesome/css/all.css' }],
+  // ['meta', { name: 'theme-color', src: '/jianyan/fontawesome/css/all.css' }],
   // ['meta', { name: 'theme-color', src: 'https://use.fontawesome.com/releases/v5.7.1/css/all.css' }],
   ['script', { type: 'text/javascript', src: "/jianyan/js/jweixin-1.6.0.js" }],
   ['script', { type: 'text/javascript', src: "/jianyan/js/uni.webview.1.5.4.js" }]
